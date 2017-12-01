@@ -1,7 +1,8 @@
 {
   "name": "react-infinite",
   "version": "0.12.1",
-  "description": "A browser-ready efficient scrolling container based on UITableView",
+  "description":
+    "A browser-ready efficient scrolling container based on UITableView",
   "main": "build/react-infinite.js",
   "repository": {
     "type": "git",
@@ -22,8 +23,10 @@
   "browser": "build/react-infinite.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint --ext .jsx --ext .js ./src ./__tests__ ./pipeline ./cypress",
-    "fix": "eslint --fix --ext .jsx --ext .js ./src ./__tests__ ./pipeline ./cypress",
+    "lint":
+      "eslint --ext .jsx --ext .js ./src ./__tests__ ./pipeline ./cypress",
+    "fix":
+      "eslint --fix --ext .jsx --ext .js ./src ./__tests__ ./pipeline ./cypress",
     "typecheck": "flow version && flow check",
     "verify": "npm test && npm run typecheck && npm run lint",
     "preversion": "npm run verify",
@@ -39,20 +42,10 @@
     "transform": {
       ".*": "<rootDir>/node_modules/babel-jest"
     },
-    "roots": [
-      "<rootDir>/__tests__",
-      "<rootDir>/src"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/__tests__/helpers"
-    ],
-    "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react"
-    ],
-    "setupFiles": [
-      "raf/polyfill",
-      "./config/jest.js"
-    ],
+    "roots": ["<rootDir>/__tests__", "<rootDir>/src"],
+    "testPathIgnorePatterns": ["<rootDir>/__tests__/helpers"],
+    "unmockedModulePathPatterns": ["<rootDir>/node_modules/react"],
+    "setupFiles": ["raf/polyfill", "./config/jest.js"],
     "collectCoverage": true,
     "verbose": true
   },
@@ -109,11 +102,9 @@
   "peerDependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "prop-types": "^16.0.0"
+    "prop-types": "^15.0.0 || ^16.0.0"
   },
   "browserify": {
-    "transform": [
-      "envify"
-    ]
+    "transform": ["envify"]
   }
 }
